@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akubrecah Entertainment - JavaScript Implementation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Dark Mode Toggle Button -->
+        <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Loading Animation -->
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="spinner"></div>
+            <p>Loading Awesome Content...</p>
+        </div>
+
+        <!-- Site header -->
+        <header class="site-header" role="banner">
+            <div class="header-content">
+                <h1>Akubrecah Entertainment</h1>
+                <p>Design | Print | Brand | Kapenguria, West Pokot</p>
+            </div>
+        </header>
+
+        <!-- Main site navigation -->
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <ul class="nav-list">
+                    <li><a href="#home" aria-describedby="home-desc">Home</a></li>
+                    <li><a href="#about" aria-describedby="about-desc">About Us</a></li>
+                    <li><a href="#services" aria-describedby="services-desc">Services</a></li>
+                    <li><a href="#contact" aria-describedby="contact-desc">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main content area -->
+        <main id="main-content" class="main-content" role="main">
+            <!-- Home section -->
+            <section id="home" aria-labelledby="welcome-heading">
+                <h2 id="welcome-heading">Welcome to Akubrecah Entertainment</h2>
+                <p>Akubrecah Entertainment is a modern cybercafe offering a wide range of digital services, including high-speed internet access, printing, and graphic design. Our mission is to provide a comfortable and productive environment for our customers in Kapenguria, West Pokot.</p>
+
+                <!-- Counter Game -->
+                <div class="counter-game">
+                    <h3>Counter Game</h3>
+                    <p>Click the buttons to increase or decrease the counter:</p>
+                    <div class="counter-display" id="counter-value">0</div>
+                    <div class="counter-buttons">
+                        <button id="decrement-btn">-1</button>
+                        <button id="reset-btn">Reset</button>
+                        <button id="increment-btn">+1</button>
+                    </div>
+                </div>
+
+                <!-- JavaScript Demo Section -->
+                <div class="demo-section">
+                    <h3>JavaScript Demo Area</h3>
+                    <p>This section demonstrates various JavaScript fundamentals in action.</p>
+                    
+                    <div class="demo-controls">
+                        <button id="welcome-button">Change Welcome Message</button>
+                        <button id="color-button">Toggle Background Color</button>
+                        <button id="discount-button">Show Special Offer</button>
+                    </div>
+                    
+                    <div class="customer-counter">
+                        Today's Visitors: <span id="visitor-count">0</span>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What are your business hours?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We are open Monday to Friday from 8:00 AM to 8:00 PM, and on Sundays from 10:00 AM to 4:00 PM. We are closed on Saturdays.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Do you offer design services?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer professional graphic design services including logos, brochures, business cards, and marketing materials.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What printing services do you provide?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide both black & white and color printing for documents, photos, banners, and other marketing materials.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured content about operations -->
+                <article aria-labelledby="daily-fresh">
+                    <h3 id="daily-fresh">Daily Fresh Operations</h3>
+                    <p>We pride ourselves on our commitment to quality and customer satisfaction. Our team works diligently to ensure that every service we provide meets the highest standards.</p>
+                    
+                    <h4>What We Offer</h4>
+                    <ul>
+                        <li>High-speed internet access</li>
+                        <li>Professional printing services</li>
+                        <li>Graphic design and branding solutions</li>
+                        <li>Comfortable seating and workspaces</li>
+                    </ul>
+                </article>
+
+                <!-- Animation Demo Section -->
+                <div class="animation-demo">
+                    <h3>Animation Playground</h3>
+                    <div class="animated-box" id="animated-box">
+                        <p>Click buttons to animate me!</p>
+                    </div>
+                    <div class="demo-controls">
+                        <button id="bounce-btn">Bounce</button>
+                        <button id="spin-btn">Spin</button>
+                        <button id="color-cycle-btn">Color Cycle</button>
+                        <button id="reset-animation-btn">Reset</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services section -->
+            <section id="services" aria-labelledby="services-heading">
+                <h2 id="services-heading">Our Services</h2>
+                <p>We provide comprehensive digital solutions tailored to meet the needs of our diverse clientele. Our services include:</p>
+                
+                <div class="demo-controls">
+                    <button id="calculate-price">Calculate Printing Price</button>
+                    <button id="show-all-details">Show All Details</button>
+                    <button id="hide-all-details">Hide All Details</button>
+                </div>
+                
+                <div class="discount-banner" id="discount-banner">
+                    Special Offer: 15% discount on all printing services this week!
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Design Services</h3>
+                        <p>Professional graphic design for all your branding needs including logos, brochures, and marketing materials.</p>
+                        <button class="detail-button">Show Details</button>
+                        <div class="service-detail">
+                            <p>Starting at KES 1500. We offer 3 revisions for all design projects.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3>Print Solutions</h3>
+                        <p>High-quality printing services for documents, photos, banners, and marketing materials with quick turnaround.</p>
+                        <button class="detail-button">Show Details</button>
+                        <div class="service-detail">
+                            <p>Black & white: KES 5 per page, Color: KES 20 per page. Bulk discounts available.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-trademark"></i>
+                        </div>
+                        <h3>Brand Development</h3>
+                        <p>Comprehensive branding solutions to make your business stand out in a competitive market.</p>
+                        <button class="detail-button">Show Details</button>
+                        <div class="service-detail">
+                            <p>Complete branding packages start at KES 10,000. Includes logo, style guide, and business cards.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About section -->
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">Our Story</h2>
+                <p>Founded in 2024 by Powel Mwenesi with an ambitious dream, Akubrecah Entertainment began to provide affordable, high-quality digital and printing services while fostering creativity and innovation in branding and design to bring modern digital services to the heart of Kapenguria, West Pokot.</p>
+
+                <div class="mission-vision">
+                    <article class="mission" aria-labelledby="mission-heading">
+                        <h3 id="mission-heading">Mission</h3>
+                        <p>To provide affordable, high-quality digital and printing services that empower creativity and innovation in branding and design.</p>
+                    </article>
+
+                    <article class="vision" aria-labelledby="vision-heading">
+                        <h3 id="vision-heading">Vision</h3>
+                        <p>To become the leading cybercafe and digital solutions provider in Kapenguria and Kenya at Large, empowering businesses and Individuals with cutting-edge technology.</p>
+                    </article>
+                </div>
+                
+                <h3>Market Analysis</h3>
+                <h4>Target Market</h4>
+                <ul id="target-market">
+                    <li>Students: For academic research, project work, printing assignments, and online learning.</li>
+                    <li>Professionals: For document processing, CV printing, and business services.</li>
+                    <li>Small Businesses: For branding, marketing materials, and digital solutions.</li>
+                    <li>Local Residents: For everyday printing needs, internet access, and graphic design services.</li>
+                    <li>Entrepreneurs & SMEs: For branding, logo design, and marketing materials.</li>
+                </ul>
+                
+                <div class="demo-controls">
+                    <button id="highlight-students">Highlight Student Services</button>
+                    <button id="add-customer-type">Add Customer Type</button>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section id="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Contact Us</h2>
+                <p>Have questions or want to inquire about our services? Fill out the form below and we'll get back to you as soon as possible.</p>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="error-message" id="name-error">Please enter your full name (at least 2 characters)</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="error-message" id="email-error">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="design">Design Services</option>
+                            <option value="printing">Print Solutions</option>
+                            <option value="branding">Brand Development</option>
+                            <option value="internet">Internet Access</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <div class="error-message" id="message-error">Please enter a message (at least 10 characters)</div>
+                    </div>
+                    
+                    <button type="submit" id="submit-btn">Send Message</button>
+                    
+                    <div class="success-message" id="form-success">
+                        Thank you for your message! We'll get back to you soon.
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" role="complementary" aria-labelledby="practical-info">
+            <h2 id="practical-info">Visit Us Today</h2>
+            
+            <!-- Store location and contact -->
+            <section class="sidebar-section" aria-labelledby="location-heading">
+                <h3 id="location-heading">Location &amp; Contact Information</h3>
+                <div class="sidebar-contact-item">
+                    <div class="sidebar-contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <strong>Akubrecah Entertainment</strong><br>
+                        66 Main Street, Kapenguria, Kenya 30600
+                    </div>
+                </div>
+                <div class="sidebar-contact-item">
+                    <div class="sidebar-contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <a href="tel:+254791497858">+254 791 497 858</a>
+                    </div>
+                </div>
+                <div class="sidebar-contact-item">
+                    <div class="sidebar-contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <a href="mailto:poweldayck@gmail.com">poweldayck@gmail.com</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sidebar-section" aria-labelledby="hours-heading">
+                <h3 id="hours-heading">Business Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
+                <p>Sunday: 10:00 AM - 4:00 PM</p>
+                
+                <div class="demo-controls">
+                    <button id="check-status">Check Business Status</button>
+                </div>
+                <div id="status-message"></div>
+            </section>
+
+            <section class="sidebar-section" aria-labelledby="map-heading">
+                <h3 id="map-heading">Find Us</h3>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+            </section>
+            
+            <section class="sidebar-section">
+                <h3>Service Calculator</h3>
+                <div class="demo-controls">
+                    <input type="number" id="print-pages" placeholder="Number of pages" min="1">
+                    <select id="print-type">
+                        <option value="bw">Black & White</option>
+                        <option value="color">Color</option>
+                    </select>
+                    <button id="calculate-print">Calculate Cost</button>
+                </div>
+                <div id="calculation-result"></div>
+            </section>
+        </aside>
+
+        <!-- Site footer -->
+        <footer class="site-footer" role="contentinfo">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h2>Stay Connected</h2>
+                    <p>Thank you for visiting Akubrecah Entertainment! We appreciate your support and interest in our work.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <p>Follow us on social media for daily specials, new product announcements, and behind-the-scenes content!</p>
+                    
+                    <!-- Social media navigation -->
+                    <nav aria-label="Social media and external links">
+                        <h3>Connect With Us</h3>
+                        <ul class="social-links">
+                            <li><a href="https://facebook.com/poweldary" 
+                                   aria-label="Visit our Facebook page for daily updates and photos" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                   <i class="fab fa-facebook-f"></i> Facebook
+                                </a></li>
+                            <li><a href="#" 
+                                   aria-label="Visit our Instagram page" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer">
+                                   <i class="fab fa-instagram"></i> Instagram
+                                </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Akubrecah Entertainment. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
